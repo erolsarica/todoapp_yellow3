@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.todoapp_yellow">
    <application
-        android:label="todoapp_yellow"
+        android:label="Not Defteri"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

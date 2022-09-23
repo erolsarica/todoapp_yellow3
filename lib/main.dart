@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:todoapp_yellow/homepage.dart';
 
-void main() {
+void main() async{
+
+  // Hive başlat
+  await Hive.initFlutter();
+
+  // open a box
+  var box = await Hive.openBox('mybox');
   runApp(const MyApp());
 }
 
@@ -14,7 +22,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-      theme: ThemeData(primarySwatch: Colors.yellow),
+      theme: ThemeData(
+          textTheme: TextTheme(bodyText2: GoogleFonts.zillaSlab(fontWeight: FontWeight.bold, fontSize: 18)),
+          primarySwatch: Colors.yellow),
 
     );
   }
